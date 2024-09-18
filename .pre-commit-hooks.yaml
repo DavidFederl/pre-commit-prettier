@@ -3,10 +3,13 @@
   description: apply prettier to js,jsx,md,html,json,yaml files
   language: node
   entry: prettier --write
-  types: [js,jsx,md,html,json,yaml]
+  types: [file,text]
+  types_or: [javascript,json,markdown,html,yaml]
 - id: prettier-java
   name: apply prettier-java
   description: apply prettier to java files
   language: node
   entry: prettier --write
-  types: [java]
+  types: [file,text]
+  files: ^.*\.java$
+
