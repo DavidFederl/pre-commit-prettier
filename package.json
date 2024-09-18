@@ -1,0 +1,14 @@
+{
+  "name": "pre-commit-prettier-hooks",
+  "version": "0.1.0",
+  "type": "module",
+  "dependencies": {
+    "@prettier/plugin-xml": "^3.4.1",
+    "prettier": "^3.3.3",
+    "prettier-plugin-java": "^2.6.4",
+    "prettier-plugin-kotlin": "^2.1.0",
+    "prettier-plugin-nginx": "^1.0.3",
+    "prettier-plugin-properties": "^0.3.0",
+    "prettier-plugin-sql": "^0.18.1"
+  }
+}
