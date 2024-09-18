@@ -1,8 +1,12 @@
 - id: prettier
-  name: apply prettier to js,jsx,md,html,json,yaml files
+  name: apply prettier
+  description: apply prettier to js,jsx,md,html,json,yaml files
   language: node
-  entry: prettier --write "**/*.{js,jsx,md,html,json.,yaml}"
+  entry: prettier --write
+  types: [js,jsx,md,html,json,yaml]
 - id: prettier-java
-  name: apply prettier to java files
+  name: apply prettier-java
+  description: apply prettier to java files
   language: node
-  entry: prettier --write "**/*.{java}"
+  entry: prettier --write
+  types: [java]
