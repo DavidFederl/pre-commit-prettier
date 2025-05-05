@@ -1,25 +1,29 @@
-- id: prettier
-  name: apply prettier
+- id: prettier-web
+  name: apply prettier to web files
+  description: apply prettier to Javascript, jsx, JSON, CSS, and HTML files
+  stages: [pre-commit, manual]
+  language: node
+  entry: prettier --write
+  exclude: ^.+\.(xctestplan|ipynb)$
+  types_or: [javascript, jsx, json, html, css]
+- id: prettier-docs
+  name: apply prettier to documentation
   description: apply prettier to Javascript, jsx, Markdown, HTML, JSON, YAML files
   stages: [pre-commit, manual]
   language: node
   entry: prettier --write
-  types: [file,text]
-  types_or: [javascript,jsx,json,markdown,html,yaml]
+  types_or: [markdown]
 - id: prettier-java
   name: apply prettier-java
   description: apply prettier to Java files
   stages: [pre-commit, manual]
   language: node
-  entry: prettier --plugin=prettier-plugin-java --write
-  types: [file,text]
-  types_or: [java]
+  entry: prettier --plugin=prettier-plugin-java --plugin=prettier-plugin-properties --write
+  types_or: [java, java-properties]
 - id: prettier-config
-  name: apply prettier-properties and prettier-xml
+  name: apply prettier to settings
   description: apply prettier to properties and xml files
   stages: [pre-commit, manual]
   language: node
   entry: prettier --plugin=@prettier/plugin-xml --plugin=prettier-plugin-properties --write
-  types: [file,text]
-  files: ^.+\.(properties|xml)$
-
+  types_or: [java-properties, xml, yaml]
